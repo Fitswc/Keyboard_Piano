@@ -1,3 +1,4 @@
+#keyboard piano
 import pygame as game
 import sys
 from pygame.locals import *
