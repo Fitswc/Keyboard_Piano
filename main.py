@@ -1,21 +1,13 @@
-#keyboard piano
-import pygame as game
 import sys
+import pygame as game
 from pygame.locals import *
-from keyboard import *
+import sound
 
 game.init()
-screen = game.display.set_mode((1000,700))
-bg_color = (0, 190, 255)
-game.display.set_caption("Main")
-while True:
-    Keyboard()
-    """
-    for event in game.event.get():
-        if event.type == game.QUIT:
-            game.quit()
-            sys.exit()
-    """
-    screen.fill(bg_color)
-    game.display.flip()
+game.mixer.init()
 
+c1 = game.mixer.Sound('C1.mp3')
+c1.set_volume(0.6)
+
+c2 = game.mixer.Sound('C2.mp3')
+c2.set_volume(0.6)
