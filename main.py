@@ -11,3 +11,5 @@ c1.set_volume(0.6)
 
 c2 = game.mixer.Sound('C2.mp3')
 c2.set_volume(0.6)
+
+c3 = game.mixer.Sound('C3.mp3')
