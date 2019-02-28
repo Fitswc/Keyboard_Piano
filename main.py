@@ -44,3 +44,6 @@ while True:
             if event.key == K_1:
                 Sound.c1.play()
 
+            if event.key == K_2:
+                Sound.c2.play()
+
