@@ -47,3 +47,21 @@ while True:
             if event.key == K_2:
                 Sound.c2.play()
 
+            if event.key == K_3:
+                Sound.c3.play()
+
+            if event.key == K_4:
+                Sound.c4.play()
+
+            if event.key == K_5:
+                Sound.c5.play()
+            
+            if event.key == K_6:
+                Sound.c6.play()
+
+            if event.key == K_7:
+                Sound.c7.play()
+            
+            if event.key == K_8:
+                Sound.c8.play()
+
