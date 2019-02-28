@@ -1,7 +1,6 @@
 import sys
 import pygame as game
 from pygame.locals import *
-import Sound
 
 game.init()
 game.mixer.init()
@@ -29,18 +28,3 @@ c7.set_volume(0.6)
 
 c8 = game.mixer.Sound('C8.wav')
 c8.set_volume(0.6)
-
-game.display.set_mode((200,100))
-game.display.set_caption("Keyboard Piano")
-
-while True:
-    for event in game.event.get():
-        game.display.flip()
-
-        if event.type == QUIT:
-            game.quit()
-            sys.exit()
-        if event.type == KEYDOWN:
-            if event.key == K_1:
-                Sound.c1.play()
-
