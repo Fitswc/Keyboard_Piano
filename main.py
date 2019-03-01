@@ -33,13 +33,14 @@ def main():
     c8 = game.mixer.Sound('C8.wav')
     c8.set_volume(0.6)
 
-    game.display.set_mode((200,100))
+    screen = game.display.set_mode((200,200))
     game.display.set_caption("Keyboard Piano")
+    bg = (230,203,230)
 
     while True:
         #
         for event in game.event.get():
-            game.display.flip()
+            screen.fill(bg)
 
             if event.type == QUIT:
                 game.quit()
