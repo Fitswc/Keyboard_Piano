@@ -5,7 +5,7 @@ import Sound
 
 
 def main():
-    
+
     game.init()
     game.mixer.init()
 
