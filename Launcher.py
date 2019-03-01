@@ -1,13 +1,24 @@
 from easygui import *
-from main import *
+#from main import *
+from tkinter import messagebox
+import pygame
 
-def lan():
-    a = buttonbox(msg='Keyboard Piano',title='Keyboard Piano',choices=('启动','操作说明/关于'))
-    if a == '启动':
-        main()
+try:
+    pygame.mixer.init()
+    from main import *
 
-    if a == '操作说明/关于':
-        textbox(msg='操作说明/关于', title='Reader', text='KeyboardPiano 操作说明/关于\n\n按下:1,2,3,4,5,6,7,8 发出声音\n本钢琴声为C调\n按下键时会有一秒延迟\n\n使用到的工具:\n1. python3.7(64-bit)\n2. pygame\n3. easygui')
-        lan()
+    
+    def lan():
+        a = buttonbox(msg='Keyboard Piano',title='Keyboard Piano',choices=('启动','操作说明/关于'))
+        if a == '启动':
+            main()
 
-lan()
+        if a == '操作说明/关于':
+            textbox(msg='操作说明/关于', title='Reader', text='KeyboardPiano 操作说明/关于\n\n按下:1,2,3,4,5,6,7,8 发出声音\n本钢琴声为C调\n按下键时会有一秒延迟\n\n使用到的工具:\n1. python3.7(64-bit)\n2. pygame\n3. easygui')
+            lan()
+
+    lan()
+
+except pygame.error:
+    messagebox.showerror('Error','没有找到音频输出驱动')
+    pass

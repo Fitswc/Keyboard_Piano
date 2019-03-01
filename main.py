@@ -35,12 +35,13 @@ def main():
 
     screen = game.display.set_mode((200,200))
     game.display.set_caption("Keyboard Piano")
-    bg = (230,203,230)
+    bg = (0,0,0)
 
     while True:
         #
         for event in game.event.get():
             screen.fill(bg)
+            game.display.flip()
 
             if event.type == QUIT:
                 game.quit()
