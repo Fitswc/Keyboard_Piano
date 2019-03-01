@@ -4,8 +4,7 @@ from pygame.locals import *
 import Sound
 
 
-def main ():
-    #
+def main():
     
     game.init()
     game.mixer.init()
@@ -69,5 +68,3 @@ def main ():
             
                 if event.key == K_8:
                     Sound.c8.play()
-
-main()
